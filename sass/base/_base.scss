@@ -1,0 +1,25 @@
+
+/* Navegadores geralmente possuem valores iniciais para margin e padding, deste forma aplicamos um reset nestes valores. */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* Colocar o font-size como 10px é uma boa maneira de converter todas os valores que utilizam pixels para rem 
+  Para isto basta pegar o valor em pixels e dividir por 10. Exemplo: 30px -> 3rem, 15px -> 1.5rem.
+
+  Porém, ao colocar font-size como 10px, o usuário perde a habilidade de alterar o tamanho da fonte no navegador
+  (usuários com dificuldade para enxergar pequenos textos geralmente aumentam o tamanho da fonte padrão).
+  Assim, devemos colocar o tamanho da fonte na raiz em porcentagem, como o padrão dos navegadores é 16px
+  e nós queremos 10px, então 10/16 = 0.625, ou 62.5%.
+*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
